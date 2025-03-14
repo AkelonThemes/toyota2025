@@ -1,0 +1,522 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #dd2121;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.toyota-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(6932%) hue-rotate(357deg) brightness(94%) contrast(96%);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dd2121;
+}
+
+/* Hero slider styles */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 500px;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f5f5f5;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Brands section */
+.brands {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.brands h2 {
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.brands h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #dd2121;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.brand-logos a {
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.brand-logos a:hover {
+    transform: scale(1.05);
+}
+
+.brand-logos img {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* About section */
+.about {
+    padding: 40px 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #dd2121;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* Find More section */
+.find-more {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.find-more h2 {
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.find-more h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #dd2121;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    color: #dd2121;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 5% 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-brands {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.footer-brands a {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-brands img {
+    max-height: 30px;
+    filter: brightness(0) invert(1); /* Make logos white */
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #dd2121;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.quick-links a {
+    margin: 0 15px 10px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: #fff;
+}
+
+.browser-upgrade {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.browser-upgrade h5 {
+    margin-bottom: 10px;
+}
+
+.browser-upgrade p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.browser-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.browser {
+    margin: 10px;
+    text-align: center;
+}
+
+.browser img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    object-fit: contain;
+}
+
+.browser p {
+    margin-bottom: 5px;
+}
+
+.browser a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #dd2121;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.browser a:hover {
+    background-color: #b51a1a;
+}
+
+.no-thanks {
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.no-thanks:hover {
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 5%;
+    }
+    
+    .toyota-logo {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero-slider {
+        max-height: 300px;
+    }
+    
+    .slide {
+        height: 300px;
+    }
+    
+    .brand-logos img {
+        max-height: 40px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-links a {
+        margin: 5px 0;
+    }
+    
+    .browser-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .browser {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slider {
+        max-height: 200px;
+    }
+    
+    .slide {
+        height: 200px;
+    }
+    
+    .about-content {
+        padding: 0 10px;
+    }
+}
